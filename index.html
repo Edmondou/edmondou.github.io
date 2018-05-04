@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="">
+<html class="theme-next pisces use-motion" lang="">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Edmond, Artificial Intelligence, BCI" />
 
 
 
@@ -95,7 +95,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -236,7 +236,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Edmond Dou">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://www.diyifanwen.com/images/sichuan/0872403501531285.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -360,7 +360,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Edmond Dou">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://www.diyifanwen.com/images/sichuan/0872403501531285.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -426,34 +426,45 @@
       
         
           
-            <h1 id="Title1"><a href="#Title1" class="headerlink" title="Title1"></a>Title1</h1><hr>
-<p><strong>这是黑体</strong></p>
-<p><em>这是斜体</em></p>
-<p><strong><em>斜粗体</em></strong></p>
-<p><del>这是删除体</del></p>
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">标题设置方式，前方加#号</span><br><span class="line"># Title1</span><br><span class="line">## Title2</span><br><span class="line">### Title3</span><br><span class="line">###### 最多Title6</span><br></pre></td></tr></table></figure>
+<h1 id="Title1"><a href="#Title1" class="headerlink" title="Title1"></a>Title1</h1><h2 id="Title2"><a href="#Title2" class="headerlink" title="Title2"></a>Title2</h2><h3 id="Title3"><a href="#Title3" class="headerlink" title="Title3"></a>Title3</h3><h6 id="最多Title6"><a href="#最多Title6" class="headerlink" title="最多Title6"></a>最多Title6</h6><p><code>**黑体：前后两对*号**</code><br><strong>这是黑体</strong></p>
+<p><code>*斜体：前后一对*号*</code><br><em>这是斜体</em></p>
+<p><code>***斜粗体：前后三对*号***</code><br><strong><em>斜粗体</em></strong></p>
+<p><code>~~删除体：前后两对~符号~~</code><br><del>这是删除体</del></p>
+<p>`高亮：前后一对`符号`</p>
 <p><code>高亮</code></p>
-<h2 id="Title2"><a href="#Title2" class="headerlink" title="Title2"></a>Title2</h2><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;引用</span><br><span class="line">&gt;&gt;引用嵌套</span><br></pre></td></tr></table></figure>
+<blockquote>
 <p>引用</p>
 <blockquote>
 <p>引用嵌套</p>
 </blockquote>
 </blockquote>
-<h3 id="Title3"><a href="#Title3" class="headerlink" title="Title3"></a>Title3</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码块</span><br></pre></td></tr></table></figure>
-<h4 id="Title4"><a href="#Title4" class="headerlink" title="Title4"></a>Title4</h4><ul>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码块前后用三个`符号包起来</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- 无序列表1</span><br><span class="line">  - 无序子列表11</span><br><span class="line">  - 无序子列表12</span><br><span class="line">    - 无序孙列表</span><br><span class="line">- 无序列表2</span><br><span class="line">- 无序列表3</span><br></pre></td></tr></table></figure>
+<ul>
 <li>无序列表1<ul>
 <li>无序子列表11</li>
-<li>无序子列表12</li>
+<li>无序子列表12<ul>
+<li>无序孙列表</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>无序列表2</li>
 <li>无序列表3</li>
 </ul>
-<h4 id="Title5"><a href="#Title5" class="headerlink" title="Title5"></a>Title5</h4><ol>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表1</span><br><span class="line">  1.1. 有序子列表11</span><br><span class="line">  1.2. 有序子列表12</span><br><span class="line">2. 有序列表2</span><br><span class="line">3. 有序列表3</span><br></pre></td></tr></table></figure>
+<ol>
 <li>有序列表1<br>1.1. 有序子列表11<br>1.2. 有序子列表12</li>
 <li>有序列表2</li>
-<li>有序列表3<h6 id="Title6"><a href="#Title6" class="headerlink" title="Title6"></a>Title6</h6></li>
+<li>有序列表3</li>
 </ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/5548926-a4add9dc836f7ac9.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/133" alt=""></p>
+<hr>
+<p><code>！[](http://填写图片地址)，效果如下：</code><br><img src="https://upload-images.jianshu.io/upload_images/5548926-a4add9dc836f7ac9.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/133" alt="搞笑动图"></p>
 <table>
 <thead>
 <tr>
@@ -546,6 +557,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="http://www.diyifanwen.com/images/sichuan/0872403501531285.jpg"
+                alt="Edmond Dou" />
+            
               <p class="site-author-name" itemprop="name">Edmond Dou</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -624,15 +639,9 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
@@ -679,6 +688,8 @@
   
 
 
+  
+
 
 
 
@@ -719,6 +730,11 @@
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
 
   
 
@@ -731,6 +747,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
 

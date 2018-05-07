@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c1ffd0;
+  background: #a2abba;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2992,6 +2992,6 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("http://pic3.bbzhi.com/zhiwubizhi/xinyanenyegaoqinglvsezhiwu/dong_zhiwu_164612_12.jpg");
+  background: url("/images/background.jpg");
   background-attachment: fixed;
 }

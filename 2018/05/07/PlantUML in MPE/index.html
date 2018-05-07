@@ -79,19 +79,22 @@
 
 
 
-<meta name="description" content="vscode默认是支持markdown的，只需要装一个预览插件神器：Markdown Preview Enhanced。除了常规的功能外，特别要提出的是两个功能：  （1）图像Markdown Preview Enhanced 内部支持 mermaid, PlantUML, WaveDrom, GraphViz，Vega &amp;amp; Vega-lite，Ditaa 图像渲染。你也可以通过使用 Co">
+<meta name="description" content="Markdown Preview Enhanced use PlantUML syntaxIntroductionMarkdown Preview Enhanced 内部支持 mermaid, PlantUML, WaveDrom, GraphViz，Vega &amp;amp; Vega-lite，Ditaa 图像渲染。你也可以通过使用 Code Chunk 来渲染 TikZ, Python Matpl">
 <meta name="keywords" content="Tools">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mathjax in MPE">
-<meta property="og:url" content="https://edmond.cc/2018/05/04/MPE/index.html">
+<meta property="og:title" content="PlantUML in MPE">
+<meta property="og:url" content="https://edmond.cc/2018/05/07/PlantUML in MPE/index.html">
 <meta property="og:site_name" content="Edmond blog">
-<meta property="og:description" content="vscode默认是支持markdown的，只需要装一个预览插件神器：Markdown Preview Enhanced。除了常规的功能外，特别要提出的是两个功能：  （1）图像Markdown Preview Enhanced 内部支持 mermaid, PlantUML, WaveDrom, GraphViz，Vega &amp;amp; Vega-lite，Ditaa 图像渲染。你也可以通过使用 Co">
+<meta property="og:description" content="Markdown Preview Enhanced use PlantUML syntaxIntroductionMarkdown Preview Enhanced 内部支持 mermaid, PlantUML, WaveDrom, GraphViz，Vega &amp;amp; Vega-lite，Ditaa 图像渲染。你也可以通过使用 Code Chunk 来渲染 TikZ, Python Matpl">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vuBmWCBUYJcPG56tpBnKcCgKb1IWY7j-VWeNY8caDpmZdyiXDIy5Q2m0">
-<meta property="og:updated_time" content="2018-05-07T06:18:11.902Z">
+<meta property="og:image" content="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuT88BKvLI4u44eQQ2ZQw2bQbnQb5LaZ2HiZ23gbvAK1T0000">
+<meta property="og:image" content="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuKhEIImkLaZBp-TAIYnIqD3K1RCTKlDIWB80">
+<meta property="og:image" content="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuGh9BCb9LL1wEdlVattTZnhcSBabbcIa5YdOrEZgAWJdvt4vfEQb01K20000">
+<meta property="og:updated_time" content="2018-05-07T08:43:33.328Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mathjax in MPE">
-<meta name="twitter:description" content="vscode默认是支持markdown的，只需要装一个预览插件神器：Markdown Preview Enhanced。除了常规的功能外，特别要提出的是两个功能：  （1）图像Markdown Preview Enhanced 内部支持 mermaid, PlantUML, WaveDrom, GraphViz，Vega &amp;amp; Vega-lite，Ditaa 图像渲染。你也可以通过使用 Co">
+<meta name="twitter:title" content="PlantUML in MPE">
+<meta name="twitter:description" content="Markdown Preview Enhanced use PlantUML syntaxIntroductionMarkdown Preview Enhanced 内部支持 mermaid, PlantUML, WaveDrom, GraphViz，Vega &amp;amp; Vega-lite，Ditaa 图像渲染。你也可以通过使用 Code Chunk 来渲染 TikZ, Python Matpl">
 <meta name="twitter:image" content="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vuBmWCBUYJcPG56tpBnKcCgKb1IWY7j-VWeNY8caDpmZdyiXDIy5Q2m0">
 
 
@@ -122,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://edmond.cc/2018/05/04/MPE/"/>
+  <link rel="canonical" href="https://edmond.cc/2018/05/07/PlantUML in MPE/"/>
 
 
 
 
 
-  <title>Mathjax in MPE | Edmond blog</title>
+  <title>PlantUML in MPE | Edmond blog</title>
   
 
 
@@ -235,7 +238,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://edmond.cc/2018/05/04/MPE/">
+    <link itemprop="mainEntityOfPage" href="https://edmond.cc/2018/05/07/PlantUML in MPE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Edmond Dou">
@@ -252,7 +255,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mathjax in MPE</h1>
+          <h1 class="post-title" itemprop="name headline">PlantUML in MPE</h1>
         
 
         <div class="post-meta">
@@ -264,8 +267,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-04T11:55:41+08:00">
-                2018-05-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-07T14:54:38+08:00">
+                2018-05-07
               </time>
             
 
@@ -302,23 +305,14 @@
       
 
       
-        <p>vscode默认是支持markdown的，只需要装一个预览插件神器：Markdown Preview Enhanced。<br>除了常规的功能外，特别要提出的是两个功能： </p>
-<h3 id="（1）图像"><a href="#（1）图像" class="headerlink" title="（1）图像"></a>（1）图像</h3><p>Markdown Preview Enhanced 内部支持 mermaid, PlantUML, WaveDrom, GraphViz，Vega &amp; Vega-lite，Ditaa 图像渲染。<br>你也可以通过使用 Code Chunk 来渲染 TikZ, Python Matplotlib, Plotly 等图像。</p>
-<h3 id="（2）Code-Chunk"><a href="#（2）Code-Chunk" class="headerlink" title="（2）Code Chunk"></a>（2）Code Chunk</h3><p>Markdown Preview Enhanced 支持渲染代码的运行结果!!!!!!!!</p>
-<p>当你试用过Code Chunk之后，就知道为什么说是神器了！想想画图全部是用代码，是什么感觉？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">digraph G &#123;</span><br><span class="line">  Begin -&gt; A</span><br><span class="line">  A -&gt; B</span><br><span class="line">  B -&gt; D</span><br><span class="line">  D -&gt; A</span><br><span class="line">  B -&gt; C</span><br><span class="line">  C -&gt; End</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>一块公式</p>
-<script type="math/tex; mode=display">\int_{-\infty}^\infty e^{-x^2} = \sqrt{\pi}</script><hr>
-<p>这是一行数学公式$X^e Y^{1/3}$<br>$f(x) = sin(x) + 1$</p>
-<script type="math/tex; mode=display">\sum_{x->\infty}^{100} n=</script><hr>
-<figure class="highlight python"><figcaption><span>&#123;cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">plt.show() <span class="comment"># show figure</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><figcaption><span>&#123;cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> date = <span class="built_in">Date</span>.now()</span><br><span class="line"><span class="built_in">console</span>.log(date.toString())</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><figcaption><span>&#123;cmd&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">whoami</span><br><span class="line"><span class="built_in">pwd</span></span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
-<p>npm install —save hexo-filter-plantuml</p>
-<p><img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vuBmWCBUYJcPG56tpBnKcCgKb1IWY7j-VWeNY8caDpmZdyiXDIy5Q2m0"></p>
-<p>When (a \ne 0), there are two solutions to (ax^2 + bx + c = 0) and they are</p>
-<script type="math/tex; mode=display">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</script>
+        <h1 id="Markdown-Preview-Enhanced-use-PlantUML-syntax"><a href="#Markdown-Preview-Enhanced-use-PlantUML-syntax" class="headerlink" title="Markdown Preview Enhanced use PlantUML syntax"></a>Markdown Preview Enhanced use PlantUML syntax</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Markdown Preview Enhanced 内部支持 mermaid, PlantUML, WaveDrom, GraphViz，Vega &amp; Vega-lite，Ditaa 图像渲染。<br>你也可以通过使用 Code Chunk 来渲染 TikZ, Python Matplotlib, Plotly 等图像。</p>
+<h2 id="Download-and-install-Graphviz"><a href="#Download-and-install-Graphviz" class="headerlink" title="Download and install Graphviz"></a>Download and install Graphviz</h2><p>PlantUML的图形预览依赖于<a href="http://www.graphviz.org/" target="_blank" rel="noopener">Graphviz</a>软件。<a href="https://graphviz.gitlab.io/_pages/Download/windows/graphviz-2.38.msi" target="_blank" rel="noopener">Windows版下载</a></p>
+<h2 id="configuration-environment"><a href="#configuration-environment" class="headerlink" title="configuration environment"></a>configuration environment</h2><p>安装好Graphviz后添加环境变量：<br>变量名：GRAPHVIZ_DOT<br>变量值：C:\Program Files (x86)\Graphviz2.38\bin\dot.ext</p>
+<h2 id="Install-hexo-filter-plantuml-Better-than-hexo-tag-plantuml"><a href="#Install-hexo-filter-plantuml-Better-than-hexo-tag-plantuml" class="headerlink" title="Install hexo-filter-plantuml (Better than hexo-tag-plantuml)"></a>Install hexo-filter-plantuml (Better than hexo-tag-plantuml)</h2><p>npm install —save <a href="https://github.com/wafer-li/hexo-filter-plantuml" target="_blank" rel="noopener">hexo-filter-plantuml</a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vuBmWCBUYJcPG56tpBnKcCgKb1IWY7j-VWeNY8caDpmZdyiXDIy5Q2m0"></h2><p><img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuT88BKvLI4u44eQQ2ZQw2bQbnQb5LaZ2HiZ23gbvAK1T0000"></p>
+<p><img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuKhEIImkLaZBp-TAIYnIqD3K1RCTKlDIWB80"></p>
+<h2 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuGh9BCb9LL1wEdlVattTZnhcSBabbcIa5YdOrEZgAWJdvt4vfEQb01K20000"></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">digraph G &#123;</span><br><span class="line">  Begin -&gt; A</span><br><span class="line">  A -&gt; B</span><br><span class="line">  B -&gt; D</span><br><span class="line">  D -&gt; A</span><br><span class="line">  B -&gt; C</span><br><span class="line">  C -&gt; End</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -348,8 +342,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/03/Markdown Case/" rel="next" title="Markdown Case">
-                <i class="fa fa-chevron-left"></i> Markdown Case
+              <a href="/2018/05/04/password test/" rel="next" title="Encrypted blog">
+                <i class="fa fa-chevron-left"></i> Encrypted blog
               </a>
             
           </div>
@@ -358,8 +352,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/04/password test/" rel="prev" title="Encrypted blog">
-                Encrypted blog <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/07/Mathjax in MPE/" rel="prev" title="Mathjax in MPE">
+                Mathjax in MPE <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -441,7 +435,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -487,7 +481,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#（1）图像"><span class="nav-number">1.</span> <span class="nav-text">（1）图像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（2）Code-Chunk"><span class="nav-number">2.</span> <span class="nav-text">（2）Code Chunk</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown-Preview-Enhanced-use-PlantUML-syntax"><span class="nav-number">1.</span> <span class="nav-text">Markdown Preview Enhanced use PlantUML syntax</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Download-and-install-Graphviz"><span class="nav-number">1.2.</span> <span class="nav-text">Download and install Graphviz</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#configuration-environment"><span class="nav-number">1.3.</span> <span class="nav-text">configuration environment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-hexo-filter-plantuml-Better-than-hexo-tag-plantuml"><span class="nav-number">1.4.</span> <span class="nav-text">Install hexo-filter-plantuml (Better than hexo-tag-plantuml)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.5.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-1"><span class="nav-number">1.6.</span> <span class="nav-text"></span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -688,26 +682,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src=""></script>
   
 
 

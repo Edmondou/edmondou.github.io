@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Firstnpm uninstall hexo-">
+<meta name="description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Replace Hexo’s markdown">
 <meta name="keywords" content="Tools">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mathjax in Hexo">
 <meta property="og:url" content="https://edmond.cc/2018/05/07/Mathjax in MPE/index.html">
 <meta property="og:site_name" content="Edmond blog">
-<meta property="og:description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Firstnpm uninstall hexo-">
+<meta property="og:description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Replace Hexo’s markdown">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-08T04:05:15.054Z">
+<meta property="og:updated_time" content="2018-05-08T07:31:07.522Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mathjax in Hexo">
-<meta name="twitter:description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Firstnpm uninstall hexo-">
+<meta name="twitter:description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Replace Hexo’s markdown">
 
 
 
@@ -301,7 +301,8 @@
 
       
         <p>Since I used the <code>Markdown Preview Enhanced</code> Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps.</p>
-<h1 id="First"><a href="#First" class="headerlink" title="First"></a>First</h1><p>npm uninstall hexo-renderer-marked —save<br>npm install hexo-renderer-kramed —save</p>
+<h1 id="Replace-Hexo’s-markdown-rendering-engine"><a href="#Replace-Hexo’s-markdown-rendering-engine" class="headerlink" title="Replace Hexo’s markdown rendering engine"></a>Replace Hexo’s markdown rendering engine</h1><p><em><a href="http://xudongyang.coding.me/math-in-hexo/" target="_blank" rel="noopener">Refer to this article.</a></em></p>
+<p>npm uninstall hexo-renderer-marked —save<br>npm install hexo-renderer-kramed —save</p>
 <p>Find <code>blog\node_modules\kramed\lib\rules\inline.js</code>, modify the 11th line as follows:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span><br><span class="line">  escape: /^\\([`*\[\]()#$+\-.!_&gt;])/,</span><br></pre></td></tr></table></figure></p>
 <p>This means cancel the escape to <code>\\,\{,\}</code>.<br>Meanwhile the em variable in line 20 must also be modified accordingly:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br><span class="line">  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br></pre></td></tr></table></figure>
@@ -310,15 +311,33 @@
 <h1 id="Turn-on-the-mathjax-switch-in-article"><a href="#Turn-on-the-mathjax-switch-in-article" class="headerlink" title="Turn on the mathjax switch in article"></a>Turn on the mathjax switch in article</h1><p>Set the mathjax statue in the Front-matter of article, as follows:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">mathjax: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <hr>
-<h1 id="Here-are-the-results"><a href="#Here-are-the-results" class="headerlink" title="Here are the results"></a>Here are the results</h1><p>A block of formula:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\int_&#123;-\infty&#125;^\infty e^&#123;-x^2&#125; = \sqrt&#123;\pi&#125;$$</span><br></pre></td></tr></table></figure></p>
-<script type="math/tex; mode=display">\int_{-\infty}^\infty e^{-x^2} = \sqrt{\pi}</script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\sum_&#123;x-&gt;\infty&#125;^&#123;100&#125; n=$$</span><br></pre></td></tr></table></figure>
-<script type="math/tex; mode=display">\sum_{x->\infty}^{100} n=</script><hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A line of formula: $X^e Y^&#123;1/3&#125;$, $f(x) = sin(x) + 1$</span><br></pre></td></tr></table></figure>
-<p>A line of formula: $X^e Y^{1/3}$, $f(x) = sin(x) + 1$</p>
-<hr>
+<h1 id="Here-are-the-results"><a href="#Here-are-the-results" class="headerlink" title="Here are the results"></a>Here are the results</h1><h2 id="A-block-of-formula"><a href="#A-block-of-formula" class="headerlink" title="A block of formula:"></a>A block of formula:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\int_&#123;-\infty&#125;^\infty e^&#123;-x^2&#125; = \sqrt&#123;\pi&#125;$$</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">\int_{-\infty}^\infty e^{-x^2} = \sqrt{\pi}</script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\sum_&#123;x\rightarrow \infty&#125;^&#123;100&#125; n=$$</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">\sum_{x\rightarrow \infty}^{100} n=</script><hr>
+<h2 id="A-line-of-formula"><a href="#A-line-of-formula" class="headerlink" title="A line of formula:"></a>A line of formula:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$X^e Y^&#123;1/3&#125;$, $f(x) = sin(x) + 1, \lim\limits_&#123;x\to 0&#125;=$</span><br></pre></td></tr></table></figure>
+<p>$X^e Y^{1/3}$, $f(x) = sin(x) + 1, \lim\limits_{x\to 0}=$</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are</span><br><span class="line">  $$x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;$$</span><br></pre></td></tr></table></figure>
 <p>When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are</p>
-<script type="math/tex; mode=display">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</script>
+<script type="math/tex; mode=display">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</script><hr>
+<h2 id="Other"><a href="#Other" class="headerlink" title="Other:"></a>Other:</h2><script type="math/tex; mode=display">J_\alpha(x)=\sum_{m=0}^\infty\frac{(-1)^m}{m!\Gamma(m+\alpha+1)}{\left({\frac{x}{2}}\right)}^{2m+\alpha}</script><script type="math/tex; mode=display">\left(\frac{1}{2}\right)</script><h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><p>$\vec{a} \cdot \vec{c}$</p>
+<hr>
+<h2 id="Roman-character"><a href="#Roman-character" class="headerlink" title="Roman character"></a>Roman character</h2><script type="math/tex; mode=display">\alpha-\beta-\gamma-\Gamma-\delta-\Delta-\epsilon-\varepsilon-\zeta-\eta</script><script type="math/tex; mode=display">\theta-\Theta-\vartheta-\iota-\kappa-\lambda-\Lambda-\mu-\nu-\xi-\Xi-\pi-\Pi</script><script type="math/tex; mode=display">\varpi-\rho-\varrho-\sigma-\Sigma-\varsigma-\tau-\upsilon-\upsilon-\phi-\Phi</script><script type="math/tex; mode=display">\varphi-\chi-\psi-\Psi-\omega-\Omega</script><h2 id="Different-fonts"><a href="#Different-fonts" class="headerlink" title="Different fonts"></a>Different fonts</h2><p>\mathbb or \Bbb select <code>blackboard bold</code>:</p>
+<script type="math/tex; mode=display">\mathbb {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathbf select <code>boldface</code>:</p>
+<script type="math/tex; mode=display">\mathbf {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathtt select <code>typewriter</code>:</p>
+<script type="math/tex; mode=display">\mathtt {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathrm select <code>roman</code>:</p>
+<script type="math/tex; mode=display">\mathrm {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathsf select <code>sans-serif</code>:</p>
+<script type="math/tex; mode=display">\mathsf {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathcal select <code>calligraphic</code>:</p>
+<script type="math/tex; mode=display">\mathcal {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathscr select <code>script</code>:</p>
+<script type="math/tex; mode=display">\mathscr {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathfrak select <code>Fraktur</code>:</p>
+<script type="math/tex; mode=display">\mathfrak {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script>
       
     </div>
     
@@ -357,6 +376,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/08/some cookbook/" rel="prev" title="Some Cookbook">
+                Some Cookbook <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -437,7 +460,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -450,7 +473,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -483,7 +506,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#First"><span class="nav-number">1.</span> <span class="nav-text">First</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Modify-themes-config-yml"><span class="nav-number">2.</span> <span class="nav-text">Modify themes _config.yml</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Turn-on-the-mathjax-switch-in-article"><span class="nav-number">3.</span> <span class="nav-text">Turn on the mathjax switch in article</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Here-are-the-results"><span class="nav-number">4.</span> <span class="nav-text">Here are the results</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Replace-Hexo’s-markdown-rendering-engine"><span class="nav-number">1.</span> <span class="nav-text">Replace Hexo’s markdown rendering engine</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Modify-themes-config-yml"><span class="nav-number">2.</span> <span class="nav-text">Modify themes _config.yml</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Turn-on-the-mathjax-switch-in-article"><span class="nav-number">3.</span> <span class="nav-text">Turn on the mathjax switch in article</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Here-are-the-results"><span class="nav-number">4.</span> <span class="nav-text">Here are the results</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-block-of-formula"><span class="nav-number">4.1.</span> <span class="nav-text">A block of formula:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-line-of-formula"><span class="nav-number">4.2.</span> <span class="nav-text">A line of formula:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Other"><span class="nav-number">4.3.</span> <span class="nav-text">Other:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vector"><span class="nav-number">4.4.</span> <span class="nav-text">vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Roman-character"><span class="nav-number">4.5.</span> <span class="nav-text">Roman character</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Different-fonts"><span class="nav-number">4.6.</span> <span class="nav-text">Different fonts</span></a></li></ol></li></ol></div>
             
 
           </div>

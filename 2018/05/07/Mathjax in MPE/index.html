@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="一块公式 \int_{-\infty}^\infty e^{-x^2} = \sqrt{\pi} 这是一行数学公式$X^e Y^{1/3}$$f(x) = sin(x) + 1$ \sum_{x-&amp;gt;\infty}^{100} n= When (a \ne 0), there are two solutions to (ax^2 + bx + c = 0) and they are x = {-b">
+<meta name="description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Firstnpm uninstall hexo-">
 <meta name="keywords" content="Tools">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mathjax in MPE">
+<meta property="og:title" content="Mathjax in Hexo">
 <meta property="og:url" content="https://edmond.cc/2018/05/07/Mathjax in MPE/index.html">
 <meta property="og:site_name" content="Edmond blog">
-<meta property="og:description" content="一块公式 \int_{-\infty}^\infty e^{-x^2} = \sqrt{\pi} 这是一行数学公式$X^e Y^{1/3}$$f(x) = sin(x) + 1$ \sum_{x-&amp;gt;\infty}^{100} n= When (a \ne 0), there are two solutions to (ax^2 + bx + c = 0) and they are x = {-b">
+<meta property="og:description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Firstnpm uninstall hexo-">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-07T07:17:49.090Z">
+<meta property="og:updated_time" content="2018-05-08T04:05:15.054Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mathjax in MPE">
-<meta name="twitter:description" content="一块公式 \int_{-\infty}^\infty e^{-x^2} = \sqrt{\pi} 这是一行数学公式$X^e Y^{1/3}$$f(x) = sin(x) + 1$ \sum_{x-&amp;gt;\infty}^{100} n= When (a \ne 0), there are two solutions to (ax^2 + bx + c = 0) and they are x = {-b">
+<meta name="twitter:title" content="Mathjax in Hexo">
+<meta name="twitter:description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Firstnpm uninstall hexo-">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>Mathjax in MPE | Edmond blog</title>
+  <title>Mathjax in Hexo | Edmond blog</title>
   
 
 
@@ -250,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mathjax in MPE</h1>
+          <h1 class="post-title" itemprop="name headline">Mathjax in Hexo</h1>
         
 
         <div class="post-meta">
@@ -300,12 +300,24 @@
       
 
       
-        <hr>
-<p>一块公式</p>
-<script type="math/tex; mode=display">\int_{-\infty}^\infty e^{-x^2} = \sqrt{\pi}</script><hr>
-<p>这是一行数学公式$X^e Y^{1/3}$<br>$f(x) = sin(x) + 1$</p>
+        <p>Since I used the <code>Markdown Preview Enhanced</code> Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps.</p>
+<h1 id="First"><a href="#First" class="headerlink" title="First"></a>First</h1><p>npm uninstall hexo-renderer-marked —save<br>npm install hexo-renderer-kramed —save</p>
+<p>Find <code>blog\node_modules\kramed\lib\rules\inline.js</code>, modify the 11th line as follows:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span><br><span class="line">  escape: /^\\([`*\[\]()#$+\-.!_&gt;])/,</span><br></pre></td></tr></table></figure></p>
+<p>This means cancel the escape to <code>\\,\{,\}</code>.<br>Meanwhile the em variable in line 20 must also be modified accordingly:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br><span class="line">  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br></pre></td></tr></table></figure>
+<h1 id="Modify-themes-config-yml"><a href="#Modify-themes-config-yml" class="headerlink" title="Modify themes _config.yml"></a>Modify themes _config.yml</h1><p>Enter themes directory,modify the <code>_config.yml</code>file, change mathjax default setting from <code>false</code> to <code>true</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">  enable: true</span><br><span class="line">  per_page: true</span><br><span class="line">  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
+<h1 id="Turn-on-the-mathjax-switch-in-article"><a href="#Turn-on-the-mathjax-switch-in-article" class="headerlink" title="Turn on the mathjax switch in article"></a>Turn on the mathjax switch in article</h1><p>Set the mathjax statue in the Front-matter of article, as follows:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">mathjax: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="Here-are-the-results"><a href="#Here-are-the-results" class="headerlink" title="Here are the results"></a>Here are the results</h1><p>A block of formula:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\int_&#123;-\infty&#125;^\infty e^&#123;-x^2&#125; = \sqrt&#123;\pi&#125;$$</span><br></pre></td></tr></table></figure></p>
+<script type="math/tex; mode=display">\int_{-\infty}^\infty e^{-x^2} = \sqrt{\pi}</script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\sum_&#123;x-&gt;\infty&#125;^&#123;100&#125; n=$$</span><br></pre></td></tr></table></figure>
 <script type="math/tex; mode=display">\sum_{x->\infty}^{100} n=</script><hr>
-<p>When (a \ne 0), there are two solutions to (ax^2 + bx + c = 0) and they are</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A line of formula: $X^e Y^&#123;1/3&#125;$, $f(x) = sin(x) + 1$</span><br></pre></td></tr></table></figure>
+<p>A line of formula: $X^e Y^{1/3}$, $f(x) = sin(x) + 1$</p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are</span><br><span class="line">  $$x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;$$</span><br></pre></td></tr></table></figure>
+<p>When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are</p>
 <script type="math/tex; mode=display">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</script>
       
     </div>
@@ -336,8 +348,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/07/PlantUML in MPE/" rel="next" title="PlantUML in MPE">
-                <i class="fa fa-chevron-left"></i> PlantUML in MPE
+              <a href="/2018/05/07/PlantUML in MPE/" rel="next" title="PlantUML in MPE & Hexo">
+                <i class="fa fa-chevron-left"></i> PlantUML in MPE & Hexo
               </a>
             
           </div>
@@ -396,8 +408,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -452,6 +473,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#First"><span class="nav-number">1.</span> <span class="nav-text">First</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Modify-themes-config-yml"><span class="nav-number">2.</span> <span class="nav-text">Modify themes _config.yml</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Turn-on-the-mathjax-switch-in-article"><span class="nav-number">3.</span> <span class="nav-text">Turn on the mathjax switch in article</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Here-are-the-results"><span class="nav-number">4.</span> <span class="nav-text">Here are the results</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

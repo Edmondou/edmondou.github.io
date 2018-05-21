@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Edmond blog">
 <meta property="og:description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Replace Hexo’s markdown">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-10T02:01:56.285Z">
+<meta property="og:updated_time" content="2018-05-21T06:26:21.404Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mathjax in Hexo">
 <meta name="twitter:description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Replace Hexo’s markdown">
@@ -308,7 +308,8 @@
 <p>This means cancel the escape to <code>\\,\{,\}</code>.<br>Meanwhile the em variable in line 20 must also be modified accordingly:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br><span class="line">  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br></pre></td></tr></table></figure>
 <h1 id="Modify-themes-config-yml"><a href="#Modify-themes-config-yml" class="headerlink" title="Modify themes _config.yml"></a>Modify themes _config.yml</h1><p>Enter themes directory, modify the <code>_config.yml</code>file, change mathjax default setting from <code>false</code> to <code>true</code>.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">  enable: true</span><br><span class="line">  per_page: true</span><br><span class="line">  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">  enable: true</span><br><span class="line">  per_page: true</span><br><span class="line">  cdn: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
+<p><em>Update:May,20 2018 <a href="http://docs.mathjax.org/en/latest/configuration.html" target="_blank" rel="noopener">Refer to the website</a></em></p>
 <h1 id="Turn-on-the-mathjax-in-article"><a href="#Turn-on-the-mathjax-in-article" class="headerlink" title="Turn on the mathjax in article"></a>Turn on the mathjax in article</h1><p>Set the mathjax statue in the Front-matter of article, as follows:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">mathjax: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <hr>
@@ -727,7 +728,7 @@ abcdefghijklmnopqrstuvwxyz}</script>
         }
       });
     </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_CHTML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

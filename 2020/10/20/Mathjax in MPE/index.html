@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-dou.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-dou.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-dou.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Tools," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Replace Hexo’s markdown">
+<meta name="keywords" content="Tools">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mathjax in Hexo">
+<meta property="og:url" content="https://edmond.cc/2020/10/20/Mathjax in MPE/index.html">
+<meta property="og:site_name" content="Edmond blog">
+<meta property="og:description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Replace Hexo’s markdown">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-21T06:26:21.404Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mathjax in Hexo">
+<meta name="twitter:description" content="Since I used the Markdown Preview Enhanced Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps. Replace Hexo’s markdown">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://edmond.cc/2020/10/20/Mathjax in MPE/"/>
+
+
+
+
+
+  <title>Mathjax in Hexo | Edmond blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Edmond blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://edmond.cc/2020/10/20/Mathjax in MPE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Edmond Dou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avator.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Edmond blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Mathjax in Hexo</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-10-20T21:22:05+08:00">
+                2020-10-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Since I used the <code>Markdown Preview Enhanced</code> Extension in VSCode, It can display the mathjax formula well. I want to keep the same mathjax formula into Hexo, here are the steps.</p>
+<h1 id="Replace-Hexo’s-markdown-rendering-engine"><a href="#Replace-Hexo’s-markdown-rendering-engine" class="headerlink" title="Replace Hexo’s markdown rendering engine"></a>Replace Hexo’s markdown rendering engine</h1><p><em><a href="http://xudongyang.coding.me/math-in-hexo/" target="_blank" rel="noopener">Refer to this article.</a></em></p>
+<p>npm uninstall hexo-renderer-marked —save<br>npm install hexo-renderer-kramed —save</p>
+<p>The first command uninstall Hexo’s default Markdown renderer.<br>The second command install new Markdown renderer which can support MathJax fully. After installation, you should regenerate your blog to see the changes.</p>
+<p>Find <code>blog\node_modules\kramed\lib\rules\inline.js</code>, modify the 11th line as follows:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span><br><span class="line">  escape: /^\\([`*\[\]()#$+\-.!_&gt;])/,</span><br></pre></td></tr></table></figure></p>
+<p>This means cancel the escape to <code>\\,\{,\}</code>.<br>Meanwhile the em variable in line 20 must also be modified accordingly:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br><span class="line">  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br></pre></td></tr></table></figure>
+<h1 id="Modify-themes-config-yml"><a href="#Modify-themes-config-yml" class="headerlink" title="Modify themes _config.yml"></a>Modify themes _config.yml</h1><p>Enter themes directory, modify the <code>_config.yml</code>file, change mathjax default setting from <code>false</code> to <code>true</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">  enable: true</span><br><span class="line">  per_page: true</span><br><span class="line">  cdn: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
+<p><em>Update:May,20 2018 <a href="http://docs.mathjax.org/en/latest/configuration.html" target="_blank" rel="noopener">Refer to the website</a></em></p>
+<h1 id="Turn-on-the-mathjax-in-article"><a href="#Turn-on-the-mathjax-in-article" class="headerlink" title="Turn on the mathjax in article"></a>Turn on the mathjax in article</h1><p>Set the mathjax statue in the Front-matter of article, as follows:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">mathjax: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="Here-are-the-results"><a href="#Here-are-the-results" class="headerlink" title="Here are the results"></a>Here are the results</h1><h2 id="A-block-of-formula"><a href="#A-block-of-formula" class="headerlink" title="A block of formula:"></a>A block of formula:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\int_&#123;-\infty&#125;^\infty e^&#123;-x^2&#125; = \sqrt&#123;\pi&#125;$$</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">\int_{-\infty}^\infty e^{-x^2} = \sqrt{\pi}</script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$\sum_&#123;x\rightarrow \infty&#125;^&#123;100&#125; n=$$</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">\sum_{x\rightarrow \infty}^{100} n=</script><hr>
+<h2 id="A-line-of-formula"><a href="#A-line-of-formula" class="headerlink" title="A line of formula:"></a>A line of formula:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$X^e Y^&#123;1/3&#125;$, $f(x) = sin(x) + 1, \lim\limits_&#123;x\to 0&#125;=$</span><br></pre></td></tr></table></figure>
+<p>$X^e Y^{1/3}$, $f(x) = sin(x) + 1, \lim\limits_{x\to 0}=$</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are</span><br><span class="line">  $$x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;$$</span><br></pre></td></tr></table></figure>
+<p>When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are</p>
+<script type="math/tex; mode=display">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</script><hr>
+<h2 id="Other"><a href="#Other" class="headerlink" title="Other:"></a>Other:</h2><script type="math/tex; mode=display">J_\alpha(x)=\sum_{m=0}^\infty\frac{(-1)^m}{m!\Gamma(m+\alpha+1)}{\left({\frac{x}{2}}\right)}^{2m+\alpha}</script><script type="math/tex; mode=display">\left(\frac{1}{2}\right)</script><h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><p>$\vec{a} \cdot \vec{c}$</p>
+<hr>
+<h2 id="Roman-character"><a href="#Roman-character" class="headerlink" title="Roman character"></a>Roman character</h2><script type="math/tex; mode=display">\alpha-\beta-\gamma-\Gamma-\delta-\Delta-\epsilon-\varepsilon-\zeta-\eta</script><script type="math/tex; mode=display">\theta-\Theta-\vartheta-\iota-\kappa-\lambda-\Lambda-\mu-\nu-\xi-\Xi-\pi-\Pi</script><script type="math/tex; mode=display">\varpi-\rho-\varrho-\sigma-\Sigma-\varsigma-\tau-\upsilon-\upsilon-\phi-\Phi</script><script type="math/tex; mode=display">\varphi-\chi-\psi-\Psi-\omega-\Omega</script><h2 id="Different-fonts"><a href="#Different-fonts" class="headerlink" title="Different fonts"></a>Different fonts</h2><p>\mathbb or \Bbb select <code>blackboard bold</code>:</p>
+<script type="math/tex; mode=display">\mathbb {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathbf select <code>boldface</code>:</p>
+<script type="math/tex; mode=display">\mathbf {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathtt select <code>typewriter</code>:</p>
+<script type="math/tex; mode=display">\mathtt {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathrm select <code>roman</code>:</p>
+<script type="math/tex; mode=display">\mathrm {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathsf select <code>sans-serif</code>:</p>
+<script type="math/tex; mode=display">\mathsf {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathcal select <code>calligraphic</code>:</p>
+<script type="math/tex; mode=display">\mathcal {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathscr select <code>script</code>:</p>
+<script type="math/tex; mode=display">\mathscr {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script><p>\mathfrak select <code>Fraktur</code>:</p>
+<script type="math/tex; mode=display">\mathfrak {ABCDEFGHIJKLMNOPQRSTUVWXYZ \\ 
+abcdefghijklmnopqrstuvwxyz}</script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Tools/" rel="tag"># Tools</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/10/20/Markdown Case/" rel="next" title="Markdown syntax">
+                <i class="fa fa-chevron-left"></i> Markdown syntax
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/10/20/password test/" rel="prev" title="Encrypted blog">
+                Encrypted blog <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avator.jpg"
+                alt="Edmond Dou" />
+            
+              <p class="site-author-name" itemprop="name">Edmond Dou</p>
+              <p class="site-description motion-element" itemprop="description">Progress is not created by contented people.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Replace-Hexo’s-markdown-rendering-engine"><span class="nav-number">1.</span> <span class="nav-text">Replace Hexo’s markdown rendering engine</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Modify-themes-config-yml"><span class="nav-number">2.</span> <span class="nav-text">Modify themes _config.yml</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Turn-on-the-mathjax-in-article"><span class="nav-number">3.</span> <span class="nav-text">Turn on the mathjax in article</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Here-are-the-results"><span class="nav-number">4.</span> <span class="nav-text">Here are the results</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-block-of-formula"><span class="nav-number">4.1.</span> <span class="nav-text">A block of formula:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-line-of-formula"><span class="nav-number">4.2.</span> <span class="nav-text">A line of formula:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Other"><span class="nav-number">4.3.</span> <span class="nav-text">Other:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vector"><span class="nav-number">4.4.</span> <span class="nav-text">vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Roman-character"><span class="nav-number">4.5.</span> <span class="nav-text">Roman character</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Different-fonts"><span class="nav-number">4.6.</span> <span class="nav-text">Different fonts</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Edmond Dou</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

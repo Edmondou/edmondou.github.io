@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-dou.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-dou.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-dou.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Tools," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name. Markdown is often">
+<meta name="keywords" content="Tools">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown syntax">
+<meta property="og:url" content="https://edmond.cc/2020/10/20/Markdown Case/index.html">
+<meta property="og:site_name" content="Edmond blog">
+<meta property="og:description" content="Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name. Markdown is often">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://p0.ssl.cdn.btime.com/t01f81ab3e81d7ccfff.gif?size=363x201">
+<meta property="og:updated_time" content="2018-05-10T03:51:37.810Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markdown syntax">
+<meta name="twitter:description" content="Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name. Markdown is often">
+<meta name="twitter:image" content="https://p0.ssl.cdn.btime.com/t01f81ab3e81d7ccfff.gif?size=363x201">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://edmond.cc/2020/10/20/Markdown Case/"/>
+
+
+
+
+
+  <title>Markdown syntax | Edmond blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Edmond blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://edmond.cc/2020/10/20/Markdown Case/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Edmond Dou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avator.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Edmond blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Markdown syntax</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-10-20T21:22:05+08:00">
+                2020-10-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Title1</span><br><span class="line">## Title2</span><br><span class="line">### Title3</span><br><span class="line">###### Maximum Title6</span><br></pre></td></tr></table></figure>
+<h1 id="Title1"><a href="#Title1" class="headerlink" title="Title1"></a>Title1</h1><h2 id="Title2"><a href="#Title2" class="headerlink" title="Title2"></a>Title2</h2><h3 id="Title3"><a href="#Title3" class="headerlink" title="Title3"></a>Title3</h3><h6 id="Maximum-Title6"><a href="#Maximum-Title6" class="headerlink" title="Maximum Title6"></a>Maximum Title6</h6><p><code>**Bold: two pairs of asterisk**</code><br><strong>This is bold.</strong></p>
+<p><code>*Italic: a pair of asterisk*</code><br><em>This is italic.</em></p>
+<p><code>***You can combine them.***</code><br><strong><em>You can combine them.</em></strong></p>
+<p><code>~~Strikethrough: two paires of tilde~~</code><br><del>This is strikethrough.</del></p>
+<p>`Highlight: a pair of backquote`</p>
+<p><code>Highlight</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;quote</span><br><span class="line">&gt;&gt;nested</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>quote</p>
+<blockquote>
+<p>nested</p>
+</blockquote>
+</blockquote>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Code block: surround with three pairs of backquote.</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- unordered list</span><br><span class="line">  - unordered sublist</span><br><span class="line">  - unordered sublist</span><br><span class="line">    - unordered sublist</span><br><span class="line">- unordered list</span><br><span class="line">- unordered list</span><br></pre></td></tr></table></figure>
+<ul>
+<li>unordered list<ul>
+<li>unordered sublist</li>
+<li>unordered sublist<ul>
+<li>unordered sublist</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>unordered list</li>
+<li>unordered list</li>
+</ul>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. ordered list</span><br><span class="line">  1.1. ordered sublist</span><br><span class="line">  1.2. ordered sublist</span><br><span class="line">2. ordered list</span><br><span class="line">3. ordered list</span><br></pre></td></tr></table></figure>
+<ol>
+<li>ordered list<br>1.1. ordered sublist<br>1.2. ordered sublist</li>
+<li>ordered list</li>
+<li>ordered list</li>
+</ol>
+<hr>
+<p><code>![comments](http://image.url), effects are listed below：</code><br><img src="https://p0.ssl.cdn.btime.com/t01f81ab3e81d7ccfff.gif?size=363x201" alt="comments"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Tables：</span><br><span class="line">th1 | ht2 | th3</span><br><span class="line">----|-----|----</span><br><span class="line">c1 | c2  | c3</span><br><span class="line">d1 | d2  | d3</span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>th1</th>
+<th>ht2</th>
+<th>th3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c1</td>
+<td>c2</td>
+<td>c3</td>
+</tr>
+<tr>
+<td>d1</td>
+<td>d2</td>
+<td>d3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| Tables        | Are           | Cool  |</span><br><span class="line">| ------------- |:-------------:| -----:|</span><br><span class="line">| col 3 is      | right-aligned | $1600 |</span><br><span class="line">| col 2 is      | centered      |   $12 |</span><br><span class="line">| zebra stripes | are neat      |    $1 |</span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<p>Hyperlinks<br><code>This is [mathjax](https://www.mathjax.org &quot;link message&quot;) website.</code><br>This is <a href="https://www.mathjax.org" title="link message" target="_blank" rel="noopener">mathjax</a> website.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I get 10 times more traffic from [Google][1] than from</span><br><span class="line">[Yahoo][2] or [MSN][3].</span><br><span class="line"></span><br><span class="line">  [1]: http://google.com/        &quot;Google&quot;</span><br><span class="line">  [2]: http://search.yahoo.com/  &quot;Yahoo Search&quot;</span><br><span class="line">  [3]: http://search.msn.com/    &quot;MSN Search&quot;</span><br></pre></td></tr></table></figure>
+<p>I get 10 times more traffic from <a href="http://google.com/" title="Google" target="_blank" rel="noopener">Google</a> than from<br><a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="noopener">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="noopener">MSN</a>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">OR：</span><br><span class="line">I get 10 times more traffic from [Google][] than from</span><br><span class="line">[Yahoo][] or [MSN][].</span><br><span class="line"></span><br><span class="line">  [google]: http://google.com/        &quot;Google&quot;</span><br><span class="line">  [yahoo]:  http://search.yahoo.com/  &quot;Yahoo Search&quot;</span><br><span class="line">  [msn]:    http://search.msn.com/    &quot;MSN Search&quot;</span><br></pre></td></tr></table></figure>
+<p>I get 10 times more traffic from <a href="http://google.com/" title="Google" target="_blank" rel="noopener">Google</a> than from<br><a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="noopener">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="noopener">MSN</a>.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Tools/" rel="tag"># Tools</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/10/20/Conversion of decimal/" rel="next" title="不同进制小数转换方法">
+                <i class="fa fa-chevron-left"></i> 不同进制小数转换方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/10/20/Mathjax in MPE/" rel="prev" title="Mathjax in Hexo">
+                Mathjax in Hexo <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avator.jpg"
+                alt="Edmond Dou" />
+            
+              <p class="site-author-name" itemprop="name">Edmond Dou</p>
+              <p class="site-description motion-element" itemprop="description">Progress is not created by contented people.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Title1"><span class="nav-number">1.</span> <span class="nav-text">Title1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Title2"><span class="nav-number">1.1.</span> <span class="nav-text">Title2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Title3"><span class="nav-number">1.1.1.</span> <span class="nav-text">Title3</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Maximum-Title6"><span class="nav-number">1.1.1.0.0.1.</span> <span class="nav-text">Maximum Title6</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Edmond Dou</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
